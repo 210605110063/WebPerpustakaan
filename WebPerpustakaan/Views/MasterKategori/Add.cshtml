@@ -1,0 +1,15 @@
+﻿@model WebPerpustakaan.Models.MasterKategoriControllerVM.Add
+@{
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+    <div class="form-container">
+        <form asp-action="Save" method="post">
+            @Html.TextBoxFor(x => x.NewRow.NamaKategori, new { @class = "form-control" })
+            <button type="submit">Add Category</button>
+        </form>
+    </div>
+}
